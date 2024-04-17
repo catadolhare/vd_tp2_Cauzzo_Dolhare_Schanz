@@ -15,9 +15,6 @@
         datos = data
         console.log(datos)
     })
-    let altura= d3.scaleLinear()
-      .domain([0, 5])
-      .range([0, 5])
   })
   
 </script>
