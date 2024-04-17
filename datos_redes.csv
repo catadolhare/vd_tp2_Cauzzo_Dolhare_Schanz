@@ -1,35 +1,35 @@
 nombre,genero,considera_tiempo,horas_celular,tiempo_ocio,aplicaciones,tiempo_trabajo,perjudica
-Benjamin,Masculino,Si,4-5hs,3,"TikTok, Twitter, Instagram",3,Si
-Camila Cauzzo,Femenino,Si,4-5hs,4,"TikTok, Twitter, Instagram",2,Si
-Camilo,Masculino,No,1-2hs,1,"TikTok, Instagram",0,No
-Carlos,Masculino,No,1-2hs,4,Twitter,1,No
-Catalina,Femenino,Si,3-4hs,2,Instagram,1,Si
-Caterina Villegas,Femenino,Si,3-4hs,4,"TikTok, Instagram, Kindle",1,No
-Emi,Otro,Si,4-5hs,5,"TikTok, Twitter",0,Si
-Estanislao,Masculino,Si,5-6hs,4,"TikTok, Twitter, Instagram, Facebook",2,No
-Federico,Masculino,Si,1-2hs,5,"TikTok, Twitter, Instagram",2,Si
-Franco Setti,Masculino,Si,3-4hs,1,"Twitter, Instagram",2,No
-Gonzalo,Masculino,Si,5-6hs,3,"TikTok, Twitter",1,No
-Guido Salem,Masculino,Si,2-3hs,4,Twitter,0,Si
-iara,Femenino,Si,3-4hs,4,"TikTok, Instagram",2,No
-Isabel ,Femenino,Si,4-5hs,4,"TikTok, Twitter, Books",1,No
-Iván Mondrzak,Masculino,Si,+6hs,4,"Instagram, YouTube",3,Si
-Joaquin,Masculino,Si,4-5hs,4,"TikTok, Twitter",2,No
-Juan Ignacio Castore ,Masculino,No,1-2hs,1,Instagram,1,Si
-Juana Copello,Femenino,Si,1-2hs,4,"TikTok, Twitter",2,Si
-Manuel Milde,Masculino,Si,+6hs,4,Instagram,2,Si
-Maria,Femenino,No,2-3hs,4,Instagram,2,Si
-Mariana,Femenino,Si,+6hs,4,"TikTok, Twitter",1,No
-Mariano Sanson,Masculino,No,3-4hs,3,"TikTok, Instagram, Facebook, Whatsapp",2,No
-Nazaret Seranusoglu,Masculino,Si,3-4hs,3,"TikTok, Instagram",4,Si
-Nicolas Wolodarsky,Masculino,Si,3-4hs,2,"Whatsapp, YouTube",3,No
-Serena,Femenino,Si,3-4hs,5,"Twitter, Instagram",1,Si
-Tadeo Yapoudjian,Masculino,Si,4-5hs,5,Instagram,2,No
-Tomás Curzio,Masculino,Si,4-5hs,4,Twitter,2,Si
-Valentina,Femenino,Si,3-4hs,4,Instagram,1,No
-Lucas Brea,Masculino,Si,3-4hs,3,"TikTok, Instagram",2,Si
-Lara Barijhoff,Femenino,No,2-3hs,5,"TikTok, Instagram",1,Si
-Ezequiel Grinblat,Masculino,Si,3-4hs,2,"Instagram, YouTube ",1,Si
-Jaime Amigo,Masculino,Si,3-4hs,2,Instagram,1,Si
-Tomás Gallo Juraria que ya la hice,Masculino,Si,3-4hs,3,"Twitter, Instagram, whatsapp",2,No
-Felipe,Masculino,Si,5-6hs,4,TikTok,1,Si
+Benjamin,Masculino,Si,4,3,"TikTok, Twitter, Instagram",3,Si
+Camila Cauzzo,Femenino,Si,4,4,"TikTok, Twitter, Instagram",2,Si
+Camilo,Masculino,No,1,1,"TikTok, Instagram",0,No
+Carlos,Masculino,No,1,4,Twitter,1,No
+Catalina,Femenino,Si,3,2,Instagram,1,Si
+Caterina Villegas,Femenino,Si,3,4,"TikTok, Instagram, Kindle",1,No
+Emi,Otro,Si,4,5,"TikTok, Twitter",0,Si
+Estanislao,Masculino,Si,5,4,"TikTok, Twitter, Instagram, Facebook",2,No
+Federico,Masculino,Si,1,5,"TikTok, Twitter, Instagram",2,Si
+Franco Setti,Masculino,Si,3,1,"Twitter, Instagram",2,No
+Gonzalo,Masculino,Si,5,3,"TikTok, Twitter",1,No
+Guido Salem,Masculino,Si,2,4,Twitter,0,Si
+iara,Femenino,Si,3,4,"TikTok, Instagram",2,No
+Isabel ,Femenino,Si,4,4,"TikTok, Twitter, Books",1,No
+Ivan Mondrzak,Masculino,Si,5,4,"Instagram, YouTube",3,Si
+Joaquin,Masculino,Si,4,4,"TikTok, Twitter",2,No
+Juan Ignacio Castore ,Masculino,No,1,1,Instagram,1,Si
+Juana Copello,Femenino,Si,1,4,"TikTok, Twitter",2,Si
+Manuel Milde,Masculino,Si,5,4,Instagram,2,Si
+Maria,Femenino,No,2,4,Instagram,2,Si
+Mariana,Femenino,Si,5,4,"TikTok, Twitter",1,No
+Mariano Sanson,Masculino,No,3,3,"TikTok, Instagram, Facebook, Whatsapp",2,No
+Nazaret Seranusoglu,Masculino,Si,3,3,"TikTok, Instagram",4,Si
+Nicolas Wolodarsky,Masculino,Si,3,2,"Whatsapp, YouTube",3,No
+Serena,Femenino,Si,3,5,"Twitter, Instagram",1,Si
+Tadeo Yapoudjian,Masculino,Si,4,5,Instagram,2,No
+Tomas Curzio,Masculino,Si,4,4,Twitter,2,Si
+Valentina,Femenino,Si,3,4,Instagram,1,No
+Lucas Brea,Masculino,Si,3,3,"TikTok, Instagram",2,Si
+Lara Barijhoff,Femenino,No,2,5,"TikTok, Instagram",1,Si
+Ezequiel Grinblat,Masculino,Si,3,2,"Instagram, YouTube ",1,Si
+Jaime Amigo,Masculino,Si,3,2,Instagram,1,Si
+Tomas Gallo,Masculino,Si,3,3,"Twitter, Instagram, whatsapp",2,No
+Felipe,Masculino,Si,5,4,TikTok,1,Si
