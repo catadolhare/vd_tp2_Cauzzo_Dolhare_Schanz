@@ -21,16 +21,25 @@
 
 <main>
 
-<div class="container-principal">
 
-  <div class="grilla">
-  <div class="quadrant">Quadrant 1</div>
-  <div class="quadrant">Quadrant 2</div>
-  <div class="quadrant">Quadrant 3</div>
-  <div class="quadrant">Quadrant 4</div>
+<div class="grilla">
+  <div class="quadrant">
+    <div class="ejemplo-alumno">
+
+    </div>
   </div>
+  <div class="quadrant">
 
+  </div>
+  <div class="quadrant">
+
+  </div>
+  <div class="quadrant">
+
+  </div>
 </div>
+
+
 
 </main>
 
@@ -38,20 +47,21 @@
 
 .grilla {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
     height: 100vh; 
   }
   .quadrant {
     width: 45vw;
     height: 50vh;
     border: 1px solid #000;
-    box-sizing: border-box;
-    display: grid; 
-    grid-template-columns: repeat(5, 1fr); 
-    grid-template-rows: repeat(5, 1fr);
-    justify-items: center; 
-    align-items: center; 
     position: relative;
+  }
+  .ejemplo-alumno{
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    position: absolute;
+    top:50%;
+    left: 30%;
   }
 </style>
