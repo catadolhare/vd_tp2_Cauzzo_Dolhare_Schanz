@@ -28,28 +28,23 @@
 </div>
 
 
-
-
-
-
 </main>
 
 <style>
 
 .grilla {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     height: 100vh; 
   }
   .quadrant {
-    width: 50vw;
+    width: 45vw;
     height: 50vh;
     border: 1px solid #000;
     box-sizing: border-box;
-    display: grid; 
-    grid-template-columns: repeat(5, 1fr); 
-    grid-template-rows: repeat(5, 1fr); 
     justify-items: center; 
     align-items: center; 
     position: relative;
