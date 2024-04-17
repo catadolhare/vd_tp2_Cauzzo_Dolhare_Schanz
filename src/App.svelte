@@ -17,6 +17,12 @@
     .domain([0, 5])
     .range([0, 100])
 
+
+
+  let horas_celular = d3.scaleQuantize()
+    .domain([2, 3, 4, 5, 6])
+    .range(["./images/circulo.svg", "./images/triangulo.svg", "./images/cuadrado.svg", "./images/pentagono.svg", "./images/hexagono.svg"]);
+
   onMount(() => {
     d3.csv('./datos_redes.csv', d3.autoType)
       .then(data => {
@@ -33,7 +39,7 @@
 <div class="grilla">
   <div class="quadrant">
     <div class="ejemplo-alumno">
-
+      <img src={horas_celular(2)} alt="circulo" />
     </div>
   </div>
   <div class="quadrant">
@@ -65,8 +71,8 @@
     position: relative;
   }
   .ejemplo-alumno{
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     background-color: red;
     position: absolute;
     top:50%;
