@@ -1,35 +1,35 @@
-Marca temporal,Nombre,Género,¿Consideras que sos una persona que pasa mucho tiempo con el celular?,¿Cuál es el tiempo promedio en horas que utilizas el celular en el día?,"¿Cuánto de ese tiempo lo dedicas a ocio y entretenimiento? (Redes sociales, juegos, contenido en línea, etc)",¿Cuáles son las aplicaciones donde pasas mas tiempo?,¿Cuánto de ese tiempo lo dedicas para tareas/trabajo?,¿Sentís que el tiempo que pasas usando el celular te perjudica más de lo que te beneficia?
-27/3/2024 22:06:51,Benjamin,Masculino,Si,4-5hs,3,"TikTok, Twitter, Instagram",3,Sí
-3/4/2024 9:27:28,Camila Cauzzo,Femenino,Si,4-5hs,4,"TikTok, Twitter, Instagram",2,Sí
-27/3/2024 15:09:41,Camilo,Masculino,No,1-2hs,1,"TikTok, Instagram",0,No
-27/3/2024 14:38:03,Carlos,Masculino,No,1-2hs,4,Twitter,1,No
-27/3/2024 14:40:35,Catalina,Femenino,Si,3-4hs,2,Instagram,1,Sí
-3/4/2024 9:25:26,Caterina Villegas,Femenino,Si,3-4hs,4,"TikTok, Instagram, Kindle",1,No
-27/3/2024 15:02:42,Emi,Otro,Si,4-5hs,5,"TikTok, Twitter",0,Sí
-27/3/2024 15:19:45,Estanislao,Masculino,Si,5-6hs,4,"TikTok, Twitter, Instagram, Facebook",2,No
-27/3/2024 19:44:52,Federico,Masculino,Si,1-2hs,5,"TikTok, Twitter, Instagram",2,Sí
-27/3/2024 14:55:38,Franco Setti,Masculino,Si,3-4hs,1,"Twitter, Instagram",2,No
-27/3/2024 14:58:11,Gonzalo,Masculino,Si,5-6hs,3,"TikTok, Twitter",1,No
-5/4/2024 8:56:38,Guido Salem,Masculino,Si,2-3hs,4,Twitter,0,Sí
-3/4/2024 8:58:16,iara,Femenino,Si,3-4hs,4,"TikTok, Instagram",2,No
-27/3/2024 15:14:02,Isabel ,Femenino,Si,4-5hs,4,"TikTok, Twitter, Books",1,No
-27/3/2024 14:55:47,Iván Mondrzak,Masculino,Si,+6hs,4,"Instagram, YouTube",3,Sí
-3/4/2024 9:28:12,Joaquin,Masculino,Si,4-5hs,4,"TikTok, Twitter",2,No
-3/4/2024 9:16:27,Juan Ignacio Castore ,Masculino,No,1-2hs,1,Instagram,1,Sí
-3/4/2024 8:15:14,Juana Copello,Femenino,Si,1-2hs,4,"TikTok, Twitter",2,Sí
-27/3/2024 14:56:14,Manuel Milde,Masculino,Si,+6hs,4,Instagram,2,Sí
-27/3/2024 15:17:22,Maria,Femenino,No,2-3hs,4,Instagram,2,Sí
-3/4/2024 10:50:59,Mariana,Femenino,Si,+6hs,4,"TikTok, Twitter",1,No
-8/4/2024 18:41:31,Mariano Sanson,Masculino,No,3-4hs,3,"TikTok, Instagram, Facebook, Whatsapp",2,No
-8/4/2024 12:01:55,Nazaret Seranusoglu,Masculino,Si,3-4hs,3,"TikTok, Instagram",4,Sí
-31/3/2024 9:37:49,Nicolas Wolodarsky,Masculino,Si,3-4hs,2,"Whatsapp, YouTube",3,No
-27/3/2024 16:07:46,Serena,Femenino,Si,3-4hs,5,"Twitter, Instagram",1,Sí
-3/4/2024 17:30:53,Tadeo Yapoudjian,Masculino,Si,4-5hs,5,Instagram,2,No
-3/4/2024 8:31:41,Tomás Curzio,Masculino,Si,4-5hs,4,Twitter,2,Sí
-27/3/2024 16:18:43,Valentina,Femenino,Si,3-4hs,4,Instagram,1,No
-10/4/2024 9:14:02,Lucas Brea,Masculino,Si,3-4hs,3,"TikTok, Instagram",2,Sí
-10/4/2024 9:14:26,Lara Barijhoff,Femenino,No,2-3hs,5,"TikTok, Instagram",1,Sí
-10/4/2024 9:38:47,Ezequiel Grinblat,Masculino,Si,3-4hs,2,"Instagram, YouTube ",1,Sí
-10/4/2024 9:48:01,Jaime Amigo,Masculino,Si,3-4hs,2,Instagram,1,Sí
-10/4/2024 9:54:24,Tomás Gallo Juraria que ya la hice,Masculino,Si,3-4hs,3,"Twitter, Instagram, whatsapp",2,No
-10/4/2024 10:01:44,Felipe,Masculino,Si,5-6hs,4,TikTok,1,Sí
+nombre,genero,considera_tiempo,horas_celular,tiempo_ocio,aplicaciones,tiempo_trabajo,perjudica
+Benjamin,Masculino,Si,4-5hs,3,"TikTok, Twitter, Instagram",3,Sí
+Camila Cauzzo,Femenino,Si,4-5hs,4,"TikTok, Twitter, Instagram",2,Sí
+Camilo,Masculino,No,1-2hs,1,"TikTok, Instagram",0,No
+Carlos,Masculino,No,1-2hs,4,Twitter,1,No
+Catalina,Femenino,Si,3-4hs,2,Instagram,1,Sí
+Caterina Villegas,Femenino,Si,3-4hs,4,"TikTok, Instagram, Kindle",1,No
+Emi,Otro,Si,4-5hs,5,"TikTok, Twitter",0,Sí
+Estanislao,Masculino,Si,5-6hs,4,"TikTok, Twitter, Instagram, Facebook",2,No
+Federico,Masculino,Si,1-2hs,5,"TikTok, Twitter, Instagram",2,Sí
+Franco Setti,Masculino,Si,3-4hs,1,"Twitter, Instagram",2,No
+Gonzalo,Masculino,Si,5-6hs,3,"TikTok, Twitter",1,No
+Guido Salem,Masculino,Si,2-3hs,4,Twitter,0,Sí
+iara,Femenino,Si,3-4hs,4,"TikTok, Instagram",2,No
+Isabel ,Femenino,Si,4-5hs,4,"TikTok, Twitter, Books",1,No
+Iván Mondrzak,Masculino,Si,+6hs,4,"Instagram, YouTube",3,Sí
+Joaquin,Masculino,Si,4-5hs,4,"TikTok, Twitter",2,No
+Juan Ignacio Castore ,Masculino,No,1-2hs,1,Instagram,1,Sí
+Juana Copello,Femenino,Si,1-2hs,4,"TikTok, Twitter",2,Sí
+Manuel Milde,Masculino,Si,+6hs,4,Instagram,2,Sí
+Maria,Femenino,No,2-3hs,4,Instagram,2,Sí
+Mariana,Femenino,Si,+6hs,4,"TikTok, Twitter",1,No
+Mariano Sanson,Masculino,No,3-4hs,3,"TikTok, Instagram, Facebook, Whatsapp",2,No
+Nazaret Seranusoglu,Masculino,Si,3-4hs,3,"TikTok, Instagram",4,Sí
+Nicolas Wolodarsky,Masculino,Si,3-4hs,2,"Whatsapp, YouTube",3,No
+Serena,Femenino,Si,3-4hs,5,"Twitter, Instagram",1,Sí
+Tadeo Yapoudjian,Masculino,Si,4-5hs,5,Instagram,2,No
+Tomás Curzio,Masculino,Si,4-5hs,4,Twitter,2,Sí
+Valentina,Femenino,Si,3-4hs,4,Instagram,1,No
+Lucas Brea,Masculino,Si,3-4hs,3,"TikTok, Instagram",2,Sí
+Lara Barijhoff,Femenino,No,2-3hs,5,"TikTok, Instagram",1,Sí
+Ezequiel Grinblat,Masculino,Si,3-4hs,2,"Instagram, YouTube ",1,Sí
+Jaime Amigo,Masculino,Si,3-4hs,2,Instagram,1,Sí
+Tomás Gallo Juraria que ya la hice,Masculino,Si,3-4hs,3,"Twitter, Instagram, whatsapp",2,No
+Felipe,Masculino,Si,5-6hs,4,TikTok,1,Sí
