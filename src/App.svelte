@@ -19,25 +19,25 @@
 
 <main>
 
-<div class="grilla">
+<div class="container-principal">
+
+  <div class="grilla">
   <div class="quadrant">Quadrant 1</div>
   <div class="quadrant">Quadrant 2</div>
   <div class="quadrant">Quadrant 3</div>
   <div class="quadrant">Quadrant 4</div>
+  </div>
 
 </div>
-
 
 </main>
 
 <style>
 
 .grilla {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     height: 100vh; 
   }
   .quadrant {
@@ -45,6 +45,9 @@
     height: 50vh;
     border: 1px solid #000;
     box-sizing: border-box;
+    display: grid; 
+    grid-template-columns: repeat(5, 1fr); 
+    grid-template-rows: repeat(5, 1fr);
     justify-items: center; 
     align-items: center; 
     position: relative;
