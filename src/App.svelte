@@ -4,6 +4,11 @@
 
   let datos = []
 
+  let aplicaciones = d3
+    .scaleOrdinal()
+    .domain(["Facebook", "Tiktok", "Instagram", "Twitter", "Otros"])
+    .range(["#14ff00", "#ff0000", "#cc00ff", "#0500ff", "#ffd600"])
+
   onMount(() => {
     d3.csv('./datos_redes.csv', d3.autoType)
       .then(data => {
