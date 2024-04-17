@@ -9,6 +9,14 @@
     .domain(["Facebook", "Tiktok", "Instagram", "Twitter", "Otros"])
     .range(["#14ff00", "#ff0000", "#cc00ff", "#0500ff", "#ffd600"])
 
+  let margen_left = d3.scaleLinear()
+    .domain([0, 5])
+    .range([0, 100])
+
+  let margen_bottom = d3.scaleLinear()
+    .domain([0, 5])
+    .range([0, 100])
+
   onMount(() => {
     d3.csv('./datos_redes.csv', d3.autoType)
       .then(data => {
