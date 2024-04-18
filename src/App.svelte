@@ -48,12 +48,16 @@
 <main>
   <div class="grilla">
     <div class="quadrant">
-      <div class="ejemplo-alumno">
         <!-- Busca la ruta de la imagen a partir 
         del numero que le retorna horas_celular, 
         que es el índice del elemento en rutasImagenes -->
-        <img src={getImagePath(horas_celular(2))} alt="circulo" />
-      </div>
+      {#each datos as alumno}
+        {#if alumno.considera_tiempo == "si" && alumno.perjudica == "si"}
+          <div class="alumno-general" style=" bottom: {margen_bottom(alumno.tiempo_trabajo)}, left: {margen_left(alumno.tiempo_redes)}">
+            <img src={getImagePath(horas_celular(alumno.horas_celular))} alt="" />
+          </div>
+        {/if}          
+      {/each}
     </div>
     <div class="quadrant"></div>
     <div class="quadrant"></div>
@@ -73,12 +77,10 @@
     border: 1px solid #000;
     position: relative;
   }
-  .ejemplo-alumno {
+  .alumno-general {
     width: 100px;
     height: 100px;
     background-color: red;
     position: absolute;
-    top: 50%;
-    left: 30%;
   }
 </style>
