@@ -46,22 +46,52 @@
 </script>
 
 <main>
+  <h1>Visualización de clase</h1>
+
   <div class="grilla">
+
     <div class="quadrant">
-        <!-- Busca la ruta de la imagen a partir 
-        del numero que le retorna horas_celular, 
-        que es el índice del elemento en rutasImagenes -->
       {#each datos as alumno}
-        {#if alumno.considera_tiempo == "si" && alumno.perjudica == "si"}
-          <div class="alumno-general" style=" bottom: {margen_bottom(alumno.tiempo_trabajo)}, left: {margen_left(alumno.tiempo_redes)}">
+        {#if alumno.considera_tiempo == "No" && alumno.perjudica == "Si"}
+          <div class="alumno-general" style="bottom: {margen_bottom(alumno.tiempo_trabajo)}%; left: {margen_left(alumno.tiempo_redes)}%">
             <img src={getImagePath(horas_celular(alumno.horas_celular))} alt="" />
           </div>
         {/if}          
       {/each}
     </div>
-    <div class="quadrant"></div>
-    <div class="quadrant"></div>
-    <div class="quadrant"></div>
+
+    <!--En este cuadrante no se le agrega el style-->
+    <div class="quadrant">
+      {#each datos as alumno}
+        {#if alumno.considera_tiempo == "Si" && alumno.perjudica == "Si"}
+          <div class="alumno-general" style="bottom: {margen_bottom(alumno.tiempo_trabajo)}%: left: {margen_left(alumno.tiempo_redes)}%">
+            <img src={getImagePath(horas_celular(alumno.horas_celular))} alt="" />
+          </div>
+        {/if}          
+      {/each}
+    </div>
+
+    <!--En este cuadrante los que estan más arriba se pasan al cuadrante de arriba-->
+    <div class="quadrant">
+      {#each datos as alumno}
+        {#if alumno.considera_tiempo == "Si" && alumno.perjudica == "No"}
+          <div class="alumno-general" style="bottom: {margen_bottom(alumno.tiempo_trabajo)}%; left: {margen_left(alumno.tiempo_redes)}%">
+            <img src={getImagePath(horas_celular(alumno.horas_celular))} alt="" />
+          </div>
+        {/if}          
+      {/each}
+    </div>
+
+    <div class="quadrant">
+      {#each datos as alumno}
+        {#if alumno.considera_tiempo == "No" && alumno.perjudica == "No"}
+          <div class="alumno-general" style="bottom: {margen_bottom(alumno.tiempo_trabajo)}%; left: {margen_left(alumno.tiempo_redes)}%">
+            <img src={getImagePath(horas_celular(alumno.horas_celular))} alt="" />
+          </div>
+        {/if}          
+      {/each}
+    </div>
+
   </div>
 </main>
 
@@ -78,9 +108,13 @@
     position: relative;
   }
   .alumno-general {
-    width: 100px;
-    height: 100px;
+    width: 40px;
+    height: 40px;
     background-color: red;
     position: absolute;
+  }
+  .alumno-general img {
+    width: 100%;
+    height: 100%;
   }
 </style>
