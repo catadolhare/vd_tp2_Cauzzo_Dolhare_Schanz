@@ -46,7 +46,13 @@
 </script>
 
 <main>
-  <h1>Visualización de clase</h1>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap" rel="stylesheet">
+  </head>
+  
+  <h1>Uso del celular y redes sociales</h1>
 
   <div class="grilla">
 
@@ -91,7 +97,60 @@
         {/if}          
       {/each}
     </div>
+  </div>
 
+  <div class="explicacion">
+    <div class="todos-simbolos">
+      <h2>Símbolos</h2>
+      <p>Los simbolos representan la cantidad de horas utilizando el celular</p>
+      <div class="cont-simbolos">
+        <div class="simbolo">
+          <img src="./images/circulo.svg" alt="" />
+          <p>2 horas</p>
+        </div>
+        <div class="simbolo">
+          <img src="./images/triangulo.svg" alt="" />
+          <p>3 horas</p>
+        </div>
+        <div class="simbolo">
+          <img src="./images/cuadrado.svg" alt="" />
+          <p>4 horas</p>
+        </div>
+        <div class="simbolo">
+          <img src="./images/pentagono.svg" alt="" />
+          <p>5 horas</p>
+        </div>
+        <div class="simbolo">
+          <img src="./images/hexagono.svg" alt="" />
+          <p>6 horas</p>
+        </div>
+      </div>
+    </div>
+    <div class="aplicaciones">
+      <h2>Aplicaciones</h2>
+      <div class="cont-apps-color">
+        <div class="cont-apps">
+          <div class="app"><p>Instagram</p></div>
+          <div class="color" style="background-color: {aplicaciones("Instagram")}"></div>
+        </div>
+        <div class="cont-apps">
+          <div class="app"><p>Facebook</p></div>
+          <div class="color" style="background-color: {aplicaciones("Facebook")}"></div>
+        </div>
+        <div class="cont-apps">
+          <div class="app"><p>Tiktok</p></div>
+          <div class="color" style="background-color: {aplicaciones("Tiktok")}"></div>
+        </div>
+        <div class="cont-apps">
+          <div class="app"><p>Twitter</p></div>
+          <div class="color" style="background-color: {aplicaciones("Twitter")}"></div>
+        </div>
+        <div class="cont-apps">
+          <div class="app"><p>Otros</p></div>
+          <div class="color" style="background-color: {aplicaciones("Otros")}"></div>
+        </div>
+      </div>
+    </div>
   </div>
 </main>
 
@@ -100,6 +159,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: 100vh;
+    background-color: white;
   }
   .quadrant {
     width: 45vw;
@@ -116,5 +176,53 @@
   .alumno-general img {
     width: 100%;
     height: 100%;
+  }
+  h1{
+    font-family: "Jersey 25", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+  }
+  .explicacion{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .todos-simbolos{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .cont-simbolos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .simbolo{
+    display: flex;
+    flex-direction: column;
+  }
+  .aplicaciones{
+    width:50%;
+    display: flex;
+    flex-direction: column;
+
+  }
+  .cont-apps-color{
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+  }
+  .cont-apps{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    
+  }
+  .color{
+    width: 50%;
+  }
+  .app{
+    width: 50%;
   }
 </style>
