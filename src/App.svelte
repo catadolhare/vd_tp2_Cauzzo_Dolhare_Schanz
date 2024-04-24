@@ -202,6 +202,7 @@
     display: flex;
     flex-direction: column;
     margin-left: 3px;
+    align-items: center;
   }
   .aplicaciones{
     width:50%;
