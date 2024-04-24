@@ -105,23 +105,23 @@
       <p>Los simbolos representan la cantidad de horas utilizando el celular</p>
       <div class="cont-simbolos">
         <div class="simbolo">
-          <img src="./images/circulo.svg" alt="" />
+          <img src="./images/circulo.svg" alt="" class="color-figure"  />
           <p>2 horas</p>
         </div>
         <div class="simbolo">
-          <img src="./images/triangulo.svg" alt="" />
+          <img src="./images/triangulo.svg" alt="" class="color-figure" />
           <p>3 horas</p>
         </div>
         <div class="simbolo">
-          <img src="./images/cuadrado.svg" alt="" />
+          <img src="./images/cuadrado.svg" alt="" class="color-figure" />
           <p>4 horas</p>
         </div>
         <div class="simbolo">
-          <img src="./images/pentagono.svg" alt="" />
+          <img src="./images/pentagono.svg" alt="" class="color-figure" />
           <p>5 horas</p>
         </div>
         <div class="simbolo">
-          <img src="./images/hexagono.svg" alt="" />
+          <img src="./images/hexagono.svg" alt="" class="color-figure" />
           <p>6 horas</p>
         </div>
       </div>
@@ -131,23 +131,23 @@
       <div class="cont-apps-color">
         <div class="cont-apps">
           <div class="app"><p>Instagram</p></div>
-          <div class="color" style="background-color: {aplicaciones("Instagram")}"></div>
+            <div class="color" style="background-color: {aplicaciones("Instagram")}"></div>
         </div>
         <div class="cont-apps">
           <div class="app"><p>Facebook</p></div>
-          <div class="color" style="background-color: {aplicaciones("Facebook")}"></div>
+            <div class="color" style="background-color: {aplicaciones("Facebook")}"></div>
         </div>
         <div class="cont-apps">
           <div class="app"><p>Tiktok</p></div>
-          <div class="color" style="background-color: {aplicaciones("Tiktok")}"></div>
+            <div class="color" style="background-color: {aplicaciones("Tiktok")}"></div>
         </div>
         <div class="cont-apps">
           <div class="app"><p>Twitter</p></div>
-          <div class="color" style="background-color: {aplicaciones("Twitter")}"></div>
+            <div class="color" style="background-color: {aplicaciones("Twitter")}"></div>
         </div>
         <div class="cont-apps">
           <div class="app"><p>Otros</p></div>
-          <div class="color" style="background-color: {aplicaciones("Otros")}"></div>
+            <div class="color" style="background-color: {aplicaciones("Otros")}"></div>
         </div>
       </div>
     </div>
@@ -204,6 +204,8 @@
   .simbolo{
     display: flex;
     flex-direction: column;
+    margin-left: 3px;
+    align-items: center;
   }
   .aplicaciones{
     width:50%;
@@ -214,7 +216,8 @@
   .cont-apps-color{
     display: flex;
     flex-direction: column;
-    width: 50px;
+    justify-content: space-between;
+    width: 200px;
   }
   .cont-apps{
     width: 100%;
@@ -223,9 +226,13 @@
     
   }
   .color{
-    width: 50%;
+    width: 25%;
+    margin-left: 50px;
   }
   .app{
     width: 50%;
+  }
+  .color-figure {
+    filter: brightness(0) invert(1) sepia(1) saturate(1000%) hue-rotate(150deg) grayscale(100%);
   }
 </style>
