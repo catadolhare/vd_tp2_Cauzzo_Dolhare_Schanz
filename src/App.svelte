@@ -155,6 +155,9 @@
 </main>
 
 <style>
+  main{
+    background-color: antiquewhite;
+  }
   .grilla {
     display: grid;
     grid-template-columns: 1fr 1fr;
