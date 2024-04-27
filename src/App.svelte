@@ -117,14 +117,15 @@
   <div class="container">
     {#each datos as alumno}
       <div class="alumno-general">
-        <div class="horas-genero">
-          <div class="figura">
-            {@html generarSVG(alumno)}
+        <div class="borde">
+          <div class="horas-genero">
+            <div class="figura">
+              {@html generarSVG(alumno)}
+            </div>
+            <div class="genero">
+              <img src="{genero(alumno.genero)}" alt="">
+            </div>
           </div>
-          <div class="genero">
-            <img src="{genero(alumno.genero)}" alt="">
-          </div>
-
         </div>
         <div class="usuario">
           <p>{alumno.nombre}</p>
@@ -137,6 +138,8 @@
 <style>
   main{
     background-color: antiquewhite;
+    margin: 0;
+    padding: 0;
   }
   h1{
     font-family: "Jersey 25", sans-serif;
@@ -183,6 +186,15 @@
     color: black;
     font-weight: bold;
   }
-
+  .borde-horizontal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hora-horizontal{
+    width: 20px;
+    height: 20px;
+    background-color: black;
+  }
 
 </style>
