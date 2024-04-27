@@ -1,36 +1,36 @@
-nombre,genero,considera_tiempo,horas_celular,tiempo_ocio,aplicaciones,tiempo_trabajo,perjudica
-Benjamin,Masculino,Si,5,3,"TikTok, Twitter, Instagram",3,Si
-Camila Cauzzo,Femenino,Si,5,4,"TikTok, Twitter, Instagram",2,Si
-Camilo,Masculino,No,2,1,"TikTok, Instagram",0,No
-Carlos,Masculino,No,2,4,Twitter,1,No
-Catalina,Femenino,Si,4,2,Instagram,1,Si
-Caterina Villegas,Femenino,Si,4,4,"TikTok, Instagram, Otros",1,No
-Emi,Otro,Si,5,5,"TikTok, Twitter",0,Si
-Estanislao,Masculino,Si,6,4,"TikTok, Twitter, Instagram, Facebook",2,No
-Federico,Masculino,Si,2,5,"TikTok, Twitter, Instagram",2,Si
-Franco Setti,Masculino,Si,4,1,"Twitter, Instagram",2,No
-Gonzalo,Masculino,Si,6,3,"TikTok, Twitter",1,No
-Guido Salem,Masculino,Si,3,4,Twitter,0,Si
-iara,Femenino,Si,4,4,"TikTok, Instagram",2,No
-Isabel ,Femenino,Si,5,4,"TikTok, Twitter, Otros",1,No
-Ivan Mondrzak,Masculino,Si,6,4,"Instagram, Otros",3,Si
-Joaquin,Masculino,Si,5,4,"TikTok, Twitter",2,No
-Juan Ignacio Castore ,Masculino,No,2,1,Instagram,1,Si
-Juana Copello,Femenino,Si,2,4,"TikTok, Twitter",2,Si
-Manuel Milde,Masculino,Si,6,4,Instagram,2,Si
-Maria,Femenino,No,3,4,Instagram,2,Si
-Mariana,Femenino,Si,6,4,"TikTok, Twitter",1,No
-Mariano Sanson,Masculino,No,4,3,"TikTok, Instagram, Facebook, Otros",2,No
-Nazaret Seranusoglu,Masculino,Si,4,3,"TikTok, Instagram",4,Si
-Nicolas Wolodarsky,Masculino,Si,4,2,Otros,3,No
-Serena,Femenino,Si,4,5,"Twitter, Instagram",1,Si
-Tadeo Yapoudjian,Masculino,Si,5,5,Instagram,2,No
-Tomas Curzio,Masculino,Si,5,4,Twitter,2,Si
-Valentina,Femenino,Si,4,4,Instagram,1,No
-Lucas Brea,Masculino,Si,4,3,"TikTok, Instagram",2,Si
-Lara Barijhoff,Femenino,No,3,5,"TikTok, Instagram",1,Si
-Ezequiel Grinblat,Masculino,Si,4,2,"Instagram, Otros",1,Si
-Jaime Amigo,Masculino,Si,4,2,Instagram,1,Si
-Tomas Gallo,Masculino,Si,4,3,"Twitter, Instagram, Otros",2,No
-Felipe,Masculino,Si,6,4,TikTok,1,Si
-Tomas Ward,Masculino,No,5,2,Instagram,5,No
+nombre,genero,considera_tiempo,horas_celular,tiempo_ocio,tiktok,twitter,instagram,facebook,otros,tiempo_trabajo,perjudica
+Benjamin,Masculino,Si,5,3,1,1,1,0,0,3,Si
+Camila Cauzzo,Femenino,Si,5,4,1,1,1,0,0,2,Si
+Camilo,Masculino,No,2,1,1,0,1,0,0,0,No
+Carlos,Masculino,No,2,4,0,1,0,0,0,1,No
+Catalina,Femenino,Si,4,2,0,0,1,0,0,1,Si
+Caterina Villegas,Femenino,Si,4,4,1,0,1,0,1,1,No
+Emi,Otro,Si,5,5,1,1,0,0,0,0,Si
+Estanislao,Masculino,Si,6,4,1,1,1,1,0,2,No
+Federico,Masculino,Si,2,5,1,1,1,0,0,2,Si
+Franco Setti,Masculino,Si,4,1,0,1,1,0,0,2,No
+Gonzalo,Masculino,Si,6,3,1,1,0,0,0,1,No
+Guido Salem,Masculino,Si,3,4,0,1,0,0,0,0,Si
+iara,Femenino,Si,4,4,1,0,1,0,0,2,No
+Isabel ,Femenino,Si,5,4,1,1,0,0,1,1,No
+Ivan Mondrzak,Masculino,Si,6,4,0,0,1,0,1,3,Si
+Joaquin,Masculino,Si,5,4,1,1,0,0,0,2,No
+Juan Ignacio Castore ,Masculino,No,2,1,0,0,1,0,0,1,Si
+Juana Copello,Femenino,Si,2,4,1,1,0,0,0,2,Si
+Manuel Milde,Masculino,Si,6,4,0,0,1,0,0,2,Si
+Maria,Femenino,No,3,4,0,0,1,0,0,2,Si
+Mariana,Femenino,Si,6,4,1,1,0,0,0,1,No
+Mariano Sanson,Masculino,No,4,3,1,0,1,1,1,2,No
+Nazaret Seranusoglu,Masculino,Si,4,3,1,0,1,0,0,4,Si
+Nicolas Wolodarsky,Masculino,Si,4,2,0,0,0,0,1,3,No
+Serena,Femenino,Si,4,5,0,1,1,0,0,1,Si
+Tadeo Yapoudjian,Masculino,Si,5,5,0,0,1,0,0,2,No
+Tomas Curzio,Masculino,Si,5,4,0,1,0,0,0,2,Si
+Valentina,Femenino,Si,4,4,0,0,1,0,0,1,No
+Lucas Brea,Masculino,Si,4,3,1,0,1,0,0,2,Si
+Lara Barijhoff,Femenino,No,3,5,1,0,1,0,0,1,Si
+Ezequiel Grinblat,Masculino,Si,4,2,0,0,1,0,1,1,Si
+Jaime Amigo,Masculino,Si,4,2,0,0,1,0,0,1,Si
+Tomas Gallo,Masculino,Si,4,3,0,1,1,0,1,2,No
+Felipe,Masculino,Si,6,4,1,0,0,0,0,1,Si
+Tomas Ward,Masculino,No,5,2,0,0,1,0,0,5,No
