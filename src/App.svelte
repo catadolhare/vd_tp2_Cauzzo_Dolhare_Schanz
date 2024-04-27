@@ -194,12 +194,6 @@
     gap: 30px;
     margin-bottom: 100px;
   }
-  .quadrant {
-    width: 45vw;
-    height: 50vh;
-    border: 1px solid #000;
-    position: relative;
-  }
   .alumno-general {
     display: flex;
     justify-content: center;
