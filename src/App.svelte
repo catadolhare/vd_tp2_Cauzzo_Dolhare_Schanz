@@ -46,6 +46,15 @@
     .domain(["Femenino", "Masculino", "Otro"])
     .range(["./images/fem.svg", "./images/masc.svg", "./images/otro.svg",]);
 
+  let tiempo = d3
+    .scaleQuantize()
+    .domain([1,5])
+    .range(["./images/1hora.svg", "./images/2horas.svg", "./images/3horas.svg", "./images/4horas.svg", "./images/5horas.svg"]);
+
+  let posicion = d3
+    .scaleBand()
+    .domain(["Si", "No"])
+    .range([0, 100]);
 
   /* 
 
@@ -117,19 +126,35 @@
   <div class="container">
     {#each datos as alumno}
       <div class="alumno-general">
+
         <div class="borde">
-          <div class="horas-genero">
-            <div class="figura">
-              {@html generarSVG(alumno)}
-            </div>
-            <div class="genero">
-              <img src="{genero(alumno.genero)}" alt="">
+
+          <div class="info">
+            <div class="horas-genero">
+              <div class="figura">
+                <img src="{getImagePath(alumno)}" alt="">
+                <!--{@html generarSVG(alumno)}-->
+              </div>
+  
+              <div class="genero">
+                <img src="{genero(alumno.genero)}" alt="">
+              </div>
             </div>
           </div>
+          
+          <div class="borde-horizontal" style="top:{posicion(alumno.perjudica)}; ">
+            <img src="{tiempo(alumno.tiempo_ocio)}" alt="" class="borde-horizontal" style="top:{posicion(alumno.perjudica)};">
+          </div>
+          <div class="borde-vertical" style="left:{posicion(alumno.perjudica)};">
+            <img src="{tiempo(alumno.tiempo_trabajo)}" alt="" style="">
+          </div>
+
         </div>
+
         <div class="usuario">
           <p>{alumno.nombre}</p>
         </div>
+
       </div>
     {/each}
   </div>
@@ -166,13 +191,18 @@
     flex: 150px 0 0;
   }
   .horas-genero{
+    width: 100%;
     position: relative;
   }
   .figura{
-    width: 120px;
-    height: 120px;
+    width: 100%;
+    height: 100%;
   }
-  .alumno-general img {
+  .figura img{
+    width: 100%;
+    height: 100%;
+  }
+  .genero img {
     width: 100%;
     height: 100%;
   }
@@ -186,15 +216,40 @@
     color: black;
     font-weight: bold;
   }
-  .borde-horizontal{
+  .borde{
+    width:100%;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .hora-horizontal{
-    width: 20px;
-    height: 20px;
-    background-color: black;
+  .borde-horizontal{
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    padding: 0;
+    margin: 0;
+  }
+  .borde-vertical{
+    position: absolute;
+    width: 100%; /* Hacemos que el div ocupe todo el ancho del contenedor */
+    height: 5px; /* Cambiado a 5px para que sea más estrecho */
+    bottom: 0;
+    transform-origin: left bottom; /* Establecemos el origen de la rotación */
+    transform: rotate(-90deg); /* Rotamos el div */
+  }
+  .info{
+    width: 100%;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .borde-vertical img{
+    width: auto;
+    height: 100%;
+    display: block;
+    
   }
 
 </style>
