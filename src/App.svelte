@@ -3,6 +3,7 @@
   import { onMount } from "svelte";
 
   let datos = [];
+
   function color_aplicacion(alumno){
     let apps =[];
     if(alumno.tiktok==1){
@@ -22,6 +23,16 @@
     }
     return apps;
   }
+
+  function gradiente(alumno){
+    let colors = color_aplicacion(alumno);
+    if (colors.length > 1) {
+        return `linear-gradient(${colors.join(",")})`;
+    } else {
+        return colors[0];
+    }
+  }
+
   //Armo un array con las rutas de los SVG
   let rutasImagenes = [
       "./images/circulo.svg",
@@ -30,16 +41,6 @@
       "./images/pentagono.svg",
       "./images/hexagono.svg",
     ];
-
-  let aplicaciones = d3
-    .scaleOrdinal()
-    .domain(["Facebook", "Tiktok", "Instagram", "Twitter", "Otros"])
-    .range(["#14ff00", "#ff0000", "#cc00ff", "#0500ff", "#ffd600"]);
-
-  let horas_celular = d3
-    .scaleLinear()
-    .domain([2, 3, 4, 5, 6])
-    .range([0, 1, 2, 3, 4]); // Valores numéricos que representan el índice de cada elemento de rutasImagenes
 
   let genero = d3
     .scaleOrdinal()
@@ -51,10 +52,15 @@
     .domain([1,5])
     .range(["./images/1hora.svg", "./images/2horas.svg", "./images/3horas.svg", "./images/4horas.svg", "./images/5horas.svg"]);
 
-  let posicion = d3
-    .scaleBand()
-    .domain(["Si", "No"])
-    .range([0, 100]);
+  let posicion_horizontal = d3
+    .scaleOrdinal()
+    .domain(["No", "Si"])
+    .range(["top: 0px", "bottom: 0px"]);
+  
+  let posicion_vertical = d3
+    .scaleOrdinal()
+    .domain(["No", "Si"])
+    .range(["right: 0px", "left: 0px"]);
 
   /* 
 
@@ -62,45 +68,48 @@
   la ruta si yo le paso el índice
 
   */
-  
+
   function getImagePath(alumno) {
     if (alumno.horas_celular == 2){  
       return "./images/circulo.svg";
     }
     if (alumno.horas_celular == 3){
-      return "./images/triangulo.svg";
+      return "./images/triang.svg";
     }
     if (alumno.horas_celular == 4){
       return "./images/cuadrado.svg";
     }
     if (alumno.horas_celular == 5){
-      return "./images/pentagono.svg";
+      return "./images/penta.svg";
     }
     if (alumno.horas_celular == 6){
-      return "./images/hexagono.svg";
+      return "./images/hexa.svg";
     }
   }
-  
-  function generarSVG(alumno) {
-    const imagePath = getImagePath(alumno);
-    const colores = color_aplicacion(alumno);
+  function obtenerDatosAlumno(alumno) {
+  let datos = `Tiempo de ocio: ${alumno.tiempo_ocio}\n`;
+  datos += `Tiempo de trabajo: ${alumno.tiempo_trabajo}\n`;
+  datos += `Aplicaciones:\n`;
 
-    let svg = `<svg width="120" height="120">`;
-    
-    if (imagePath) {
-      svg += `<image href="${imagePath}" width="120" height="120" style="fill: `;
-      
-      if (colores.length == 1) {
-        svg += `${colores[0]};`;
-      } 
-      svg += `"/></svg>`;
-    }
-
-    return svg;
+  if (alumno.tiktok == 1) {
+    datos += `- TikTok\n`;
   }
-    
-    
-  let svgData = {};
+  if (alumno.twitter == 1) {
+    datos += `- Twitter\n`;
+  }
+  if (alumno.instagram == 1) {
+    datos += `- Instagram\n`;
+  }
+  if (alumno.facebook == 1) {
+    datos += `- Facebook\n`;
+  }
+  if (alumno.otros == 1) {
+    datos += `- Otros\n`;
+  }
+
+  return datos;
+  }
+
   onMount(() => {
     d3.csv("./datos_redes.csv", d3.autoType).then((data) => {
       datos = data;
@@ -108,7 +117,9 @@
       datos.forEach(alumno => {
         color_aplicacion(alumno);
         getImagePath(alumno);
-        generarSVG(alumno);
+        gradiente(alumno);
+        obtenerDatosAlumno(alumno);
+
       });
     });
   });
@@ -126,29 +137,23 @@
   <div class="container">
     {#each datos as alumno}
       <div class="alumno-general">
-
         <div class="borde">
-
           <div class="info">
-            <div class="horas-genero">
+            <div class="horas-genero" >
               <div class="figura">
-                <img src="{getImagePath(alumno)}" alt="">
-                <!--{@html generarSVG(alumno)}-->
-              </div>
-  
-              <div class="genero">
-                <img src="{genero(alumno.genero)}" alt="">
+                <img src="{getImagePath(alumno)}" alt=""style="background: {gradiente(alumno)}" title="{obtenerDatosAlumno(alumno)}">
               </div>
             </div>
           </div>
-          
-          <div class="borde-horizontal" style="top:{posicion(alumno.perjudica)}; ">
-            <img src="{tiempo(alumno.tiempo_ocio)}" alt="" class="borde-horizontal" style="top:{posicion(alumno.perjudica)};">
+          <div class="borde-horizontal" style="{posicion_horizontal(alumno)}; ">
+            <img src="{tiempo(alumno.tiempo_ocio)}" alt="" style="width: 100%">
           </div>
-          <div class="borde-vertical" style="left:{posicion(alumno.perjudica)};">
-            <img src="{tiempo(alumno.tiempo_trabajo)}" alt="" style="">
+          <div class="borde-vertical" style="{posicion_vertical(alumno)};">
+            <img src="{tiempo(alumno.tiempo_trabajo)}" alt="" style="width: 100%">
           </div>
-
+          <div class="genero">
+            <img src="{genero(alumno.genero)}" alt="">
+          </div>      
         </div>
 
         <div class="usuario">
@@ -157,12 +162,137 @@
 
       </div>
     {/each}
-  </div>
+    
+    
+
+    <div class="explicacion">
+      <div class="columna">
+        <p>Tiempo promedio de uso del celular</p>
+        <div class="fotos">
+          <div class="foto-container">
+            <img src="./images/circulo.svg" style= "background-color: #000000" alt="">
+            <p>1-2 horas</p>
+          </div>
+          <div class="foto-container">
+            <img src="./images/triang.svg" style="background-color: #000000" alt="">
+            <p>2-3 horas</p>
+          </div>
+          <div class="foto-container">
+            <img src="./images/cuadrado.svg" style="background-color: #000000" alt="">
+            <p>3-4 horas</p>
+          </div>
+          <div class="foto-container">
+            <img src="./images/penta.svg" style="background-color: #000000" alt="">
+            <p>4-5 horas</p>
+          </div>
+          <div class="foto-container">
+            <img src="./images/hexa.svg" style="background-color: #000000" alt="">
+            <p>+5 horas</p>
+          </div>
+        </div>
+      </div>
+    
+      <div class="columna">
+        <p>Genero</p>
+        <div class="fotos">
+          <div class="foto-container">
+            <img src="./images/femi.svg" alt="">
+            <p>Femenino</p>
+          </div>
+          <div class="foto-container">
+            <img src="./images/mascu.svg" alt="">
+            <p>Masculino</p>
+          </div>
+          <div class="foto-container">
+            <img src="./images/otrx.svg" alt="">
+            <p>Otro</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="explicacion">  
+      <div class="columna">
+        <p>La grilla</p>
+        <div>
+        <p>La cantidad de lineas representa la cantidad de horas dedicada para el ocio y para el trabajo</p>
+        <div class="fotos">
+          <div class="foto-container">
+            <img src="./images/1hora.svg" alt="">
+            <p>1 hora</p>
+          </div>
+          <div class="foto-container">
+            <img src="./images/2horas.svg" alt="">
+            <p>2 horas</p>
+          </div>
+          <div class="foto-container">
+            <img src="./images/3horas.svg" alt="">
+            <p>3 horas</p>
+          </div>
+          <div class="foto-container">
+            <img src="./images/4horas.svg" alt="">
+            <p>4 horas</p>
+          </div>
+          <div class="foto-container">
+            <img src="./images/5horas.svg" alt="">
+            <p>5 horas</p>
+          </div>
+        </div>
+       
+	    <div class="columna">
+          <p>La posicion de estas lineas representan la posicion dentro de la grilla</p>
+          <div class="fotos">
+            <div class="foto-container">
+              <img src="./images/sisi.svg" alt="">
+              <p>Considera que utiliza mucho el celular y lo perjudica</p>
+            </div>
+            <div class="foto-container">
+              <img src="./images/sino.svg" alt="">
+              <p>Considera que utiliza mucho el celular y no lo perjudica</p>
+            </div>
+            <div class="foto-container">
+              <img src="./images/nosi.svg" alt="">
+              <p>No considera que utiliza mucho el celular y lo perjudica</p>
+            </div>
+            <div class="foto-container">
+              <img src="./images/nono.svg" alt="">
+              <p>No considera que utiliza mucho el celular y no lo perjudica</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="explicacion">
+        <div class="columna">
+          <p>Colores</p>
+          <div class="fotos">
+            <div class="foto-container">
+              <div class="caja morado"></div>
+              <p>Instagram</p>
+            </div>
+            <div class="foto-container">
+              <div class="caja azul"></div>
+              <p>Twitter</p>
+            </div>
+            <div class="foto-container">
+              <div class="caja rojo"></div>
+              <p>Tik Tok</p>
+            </div>
+            <div class="foto-container">
+              <div class="caja verde"></div>
+              <p>Facebook</p>
+            </div>
+            <div class="foto-container">
+              <div class="caja amarillo"></div>
+              <p>Otros</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 </main>
 
 <style>
   main{
-    background-color: antiquewhite;
     margin: 0;
     padding: 0;
   }
@@ -194,6 +324,13 @@
     width: 100%;
     position: relative;
   }
+    .gradiente{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
   .figura{
     width: 100%;
     height: 100%;
@@ -210,11 +347,9 @@
     width: 20px;
     height: 20px;
     position: absolute;
-    top: 23%;
-    left: 42%;
-    font-size: 40px;
-    color: black;
-    font-weight: bold;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   .borde{
     width:100%;
@@ -233,7 +368,6 @@
   .borde-vertical{
     position: absolute;
     width: 100%; /* Hacemos que el div ocupe todo el ancho del contenedor */
-    height: 5px; /* Cambiado a 5px para que sea más estrecho */
     bottom: 0;
     transform-origin: left bottom; /* Establecemos el origen de la rotación */
     transform: rotate(-90deg); /* Rotamos el div */
@@ -245,11 +379,56 @@
     justify-content: center;
     align-items: center;
   }
+  .borde-horizontal img{
+    width: auto;
+    height: 100%;
+    display: block;
+    
+  }
   .borde-vertical img{
     width: auto;
     height: 100%;
     display: block;
     
   }
+  .explicacion{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    flex-direction: row;
+    justify-content: center;
+    width:1000px;
+  }
+  .columna {
+    flex: 1; 
+    padding: 0 10px; 
+  }
+  .fotos {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .foto-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3px;
+  }
+  .caja {
+      width: 50px; /* Ancho de cada div */
+      height: 20px; /* Altura de cada div */
+      border-radius: 5px; /* Bordes redondeados */
+    }
 
+    /* Define los colores de cada div */
+    .rojo { background-color: #ff0000; }
+    .azul { background-color: #0500ff;}
+    .verde { background-color: #14ff00; }
+    .amarillo { background-color: #ffd600; }
+    .morado { background-color: #cc00ff; }
 </style>
