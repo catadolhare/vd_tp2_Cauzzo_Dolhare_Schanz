@@ -292,6 +292,7 @@
   main{
     margin: 0;
     padding: 0;
+    background-color: white;
   }
   h1{
     font-family: "Jersey 25", sans-serif;
